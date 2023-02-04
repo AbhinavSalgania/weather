@@ -34,9 +34,6 @@ const CityImage = (props) => {
         setImageUrl(image);
     }
 
-    // add photographer name and link to the name
-    // add class to the image
-
     return (
         <div>
             {imageUrl && <img src={imageUrl} className="cityimg" alt={city} />}
