@@ -6,6 +6,7 @@ import CityCoordinates from './components/CityCoordinates';
 import CityTime from './components/CityTime';
 import Image from './components/Image';
 import './components/styles.css';
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -39,6 +40,9 @@ const App = () => {
           <CitySearch onSearch={handleSearch} />
 
           <Image city={city} onFetchSuccess={handleFetchSuccess} />
+
+            <Footer />
+
         </div>
     );
 };

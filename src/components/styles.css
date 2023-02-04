@@ -51,8 +51,24 @@ button{
     text-align: center;
 }
 
+.footer{
+    padding-top: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0); /* dark gray color */
+}
+
+a{
+    color: rgb(0, 0, 0); /* dark gray color */
+    text-decoration: none;
+}
+
+
 @media only screen and (min-width: 769px){
     .cityimg{
         width: 40%;
+    }
+
+    .photographer {
+        text-align: left;
     }
 }
