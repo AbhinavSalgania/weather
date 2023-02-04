@@ -1,62 +1,58 @@
 body {
-    background-color: #f2f2f2;
-    display: flex; /* allows for easy positioning of elements */
-    flex-direction: column; /* aligns elements vertically */
-    justify-content: center; /* centers elements horizontally */
-    align-items: center; /* centers elements vertically */
-    min-height: 100vh; /* makes sure the entire page is filled */
-}
-
-.cityimg {
-    width: 50%;
-    height: auto;
-    object-fit: cover; /* ensures the entire image is visible and fills the space */
-    image-rendering: crisp-edges;
+    background-image: url(../../assets/lake.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
 }
 
 h1 {
-    text-align: center;
     font-size: 3em;
     font-weight: bold;
     margin: 0;
     color: #333; /* dark gray color */
+    width: 100%;
 }
-
-.city, .description, .temperature, .humidity, .wind, .time, .feelslike {
-    text-align: center;
+.weatherinfo, .time{
+    width: 100%; 
+    color: rgb(0, 0, 0); /* dark gray color */
     font-size: 1.5em;
-    color: #333;
-    margin: 10px 0; /* adds margin to the top and bottom */
 }
 
-.search {
+.cityimg {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.searchForm {
+    padding-top: 20px;
+    width: 40%;
+}
+
+.searchBar{
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0);
+    color: rgb(6, 6, 6);
+    font-size: 1.6em;
+    width: 70%;
+}
+
+button{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgba(0,0,0,0);
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+    font-weight: bold;
+    
+}
+
+.photographer {
+    font-size: 0.9em;
+    color: rgb(0, 0, 0); /* dark gray color */
     text-align: center;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.searchBar {
-    padding: 10px; /* add padding to the search bar */
-    font-size: 1.5em; /* make the text inside the search bar medium-sized */
-    border-radius: 10px; /* round the edges of the search bar */
-    border: none; /* remove the border */
-    width: 50%; /* make the search bar take up half the width of the screen */
-}
-
-button[type="submit"] {
-    padding: 10px 20px; /* add padding to the button */
-    font-size: 1.5em; /* make the text inside the button medium-sized */
-    border-radius: 10px; /* round the edges of the button */
-    background-color: #3498db; /* change the button's background color */
-    color: white; /* change the text color inside the button */
-    border: none; /* remove the border */
-    margin-left: 10px; /* add space between the search bar and button */
-}
-
-.searchForm{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media only screen and (min-width: 769px){
+    .cityimg{
+        width: 40%;
+    }
 }

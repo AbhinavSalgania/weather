@@ -8,13 +8,13 @@ const WeatherDisplay = (props) => {
 
     const {name, sys, main, weather, wind} = weatherData;
     return(
-        <div>
+        <div class = "weatherinfo">
             <h1 className="city">{name}, {sys.country}</h1>
-            <p className="temperature">Temperature: {main.temp}</p>
-            <p className="feelslike">Feels like: {main.feels_like}</p>
+            <p className="temperature">Temperature: {main.temp} °C </p>
+            <p className="feelslike">Feels like: {main.feels_like} °C</p>
             <p className="description">{weather[0].description}</p>
-            <p className="humidity">Humidity: {main.humidity}</p>
-            <p className="wind">Wind: {wind.speed}</p>
+            <p className="humidity">Humidity: {main.humidity} % </p>
+            <p className="wind">Wind: {wind.speed} km/hr </p>
         </div>
     );
 };

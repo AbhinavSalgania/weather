@@ -5,6 +5,10 @@ const ImageApi = process.env.REACT_APP_PEXELS_API_KEY;
 const CityImage = (props) => {
     const {city} = props;
     const [imageUrl, setImageUrl] = useState(null);
+    // add photographer name
+    // add photographer link
+    const [photographer, setPhotographer] = useState(null);
+    const [photographerUrl, setPhotographerUrl] = useState(null);
 
     useEffect(() => {
         if(city) {
@@ -21,13 +25,25 @@ const CityImage = (props) => {
             }
         });
         const data = await response.json();
+        console.log (data);
         const image = data.photos[0].src.large;
+        const photographer = data.photos[0].photographer;
+        const photographerUrl = data.photos[0].photographer_url;
+        setPhotographer(photographer);
+        setPhotographerUrl(photographerUrl);
         setImageUrl(image);
     }
 
+    // add photographer name and link to the name
+    // add class to the image
+
     return (
-        <div className='cityimg'>
-            {imageUrl && <img src={imageUrl} alt={city} />}
+        <div>
+            {imageUrl && <img src={imageUrl} className="cityimg" alt={city} />}
+            <p class="photographer">
+            Photo by:&nbsp;
+            {photographer && <a href = {photographerUrl} className = "photographer" target="_blank" rel="noreferrer">{photographer}</a>}
+            </p>
         </div>
     )
 }

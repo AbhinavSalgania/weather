@@ -32,11 +32,13 @@ const App = () => {
           <CityWeatherFetcher city={city} onFetchSuccess={handleFetchSuccess} /> 
           <CityCoordinates city={city} onFetchSuccess={handleFetchCoordinates} />
           <CityTime coordinates={coordinates} onFetchSuccess={handleFetchSuccess} />
-          <Image city={city} onFetchSuccess={handleFetchSuccess} />
+          
           
           { !citySearched && <Coordinates /> }
 
           <CitySearch onSearch={handleSearch} />
+
+          <Image city={city} onFetchSuccess={handleFetchSuccess} />
         </div>
     );
 };
